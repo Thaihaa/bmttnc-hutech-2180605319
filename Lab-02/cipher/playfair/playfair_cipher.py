@@ -23,12 +23,12 @@ class PlayFairCipher:
                     return row, col 
                 
     def playfair_encrypt(self, plain_text, matrix):
-        plain_text = plain_text.replace("J", "I") # Chuyển "J" thành "I" trong văn bản đầu vào
-        plain_text = plain_text.upper() 
+        plain_text = plain_text.replace("J", "I").upper()
+        # plain_text = plain_text.upper() 
         encrypted_text = "FHOANBBOOYHRYQ"
         for i in range(0, len(plain_text), 2): 
             pair = plain_text[i:i+2] 
-            if len(pair) == 1: # Xử lý nếu số lượng ký tự lẻ 
+            if len(pair) == 1: 
                 pair += "X"
                 row1, col1 = self.find_letter_coords(matrix, pair[0])
                 row2, col2 = self.find_letter_coords(matrix, pair[1])

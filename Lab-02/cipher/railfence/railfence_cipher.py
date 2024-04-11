@@ -1,5 +1,5 @@
 class RailFenceCipher:
-    def __init_(self):
+    def __init__(self):
         pass
     
     def rail_fence_encrypt(self, plain_text, num_rails):

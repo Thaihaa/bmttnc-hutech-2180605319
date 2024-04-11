@@ -7,21 +7,23 @@ class CaesarCipher:
     def encrypt_text(self, text: str, key: int) -> str:
         alphabet_len = len(self.alphabet)
         text = text.upper()
-        encrypt_text = []
+        encrypted_text = []
         for letter in text:
             letter_index = self.alphabet.index(letter)
             output_index = (letter_index + key) % alphabet_len
             output_letter = self.alphabet[output_index]
-            encrypt_text.append(output_letter)
-        return "".join(encrypt_text)
+            encrypted_text.append(output_letter)
+        return "".join(encrypted_text)
     
-    def decrypt_text(self, text:str, key:int) -> str:
+    def decrypt_text(self, text: str, key: int) -> str:
         alphabet_len = len(self.alphabet)
         text = text.upper()
-        decrypt_text = []
+        decrypted_text = []
         for letter in text:
             letter_index = self.alphabet.index(letter)
             output_index = (letter_index - key) % alphabet_len
             output_letter = self.alphabet[output_index]
-            decrypt_text.append(output_letter)
-        return "".join(decrypt_text)
+            decrypted_text.append(output_letter)
+        return "".join(decrypted_text)
+        
+    

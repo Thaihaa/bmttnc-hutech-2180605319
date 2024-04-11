@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rail Fence Cipher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Rail Fence Cipher</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">Encryption</h2>
+                <form method="POST" action="/encrypt_railfence">
+                    <div class="form-group">
+                        <label for="inputPlainText">Plain text:</label>
+                        <input type="text" class="form-control" id="inputPlainText" name="inputPlainText" placeholder="Input Plain Text" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="numRailsEncrypt">Number of rails:</label>
+                        <input type="number" class="form-control" id="numRailsEncrypt" name="numRails" placeholder="Number of Rails" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Encrypt</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center">Decryption</h2>
+                <form method="POST" action="/decrypt_railfence">
+                    <div class="form-group">
+                        <label for="inputCipherText">Cipher text:</label>
+                        <input type="text" class="form-control" id="inputCipherText" name="inputCipherText" placeholder="Input Cipher Text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numRailsDecrypt">Number of rails:</label>
+                        <input type="number" class="form-control" id="numRailsDecrypt" name="numRails" placeholder="Number of Rails" required>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Decrypt</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
