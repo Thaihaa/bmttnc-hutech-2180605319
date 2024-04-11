@@ -5,7 +5,7 @@ class QuanLySinhVien:
     
     def generateID(self):
         maxId = 1
-        if(self.soluongSinhVien() > 0):
+        if (self.soluongSinhVien() > 0):
             maxId = self.listSinhVien[0]._id
             for sv in self.listSinhVien:
                 if(maxId < sv._id):
@@ -31,7 +31,7 @@ class QuanLySinhVien:
         if(sv != None):
             name = input("Nhap ten sinh vien: ")
             sex = input("Nhap gioi tinh sinh vien: ")
-            major = int(input("Nhap chuyen nganh cua sinh vien: "))
+            major = input("Nhap chuyen nganh cua sinh vien: ")
             diemTB = float(input("Nhap diem cua sinh vien: "))
             sv._name = name 
             sv._sex = sex
@@ -52,7 +52,7 @@ class QuanLySinhVien:
         
     def findByID(self, ID):
         searchResult = None
-        if(self.soLuongSinhVien() > 0):
+        if(self.soluongSinhVien() > 0):
             for sv in self.listSinhVien:
                 if(sv._id == ID):
                     searchResult = sv
@@ -60,7 +60,7 @@ class QuanLySinhVien:
     
     def findByName(self, keyword):
         listSV = []
-        if(self.soLuongSinhVien() > 0):
+        if(self.soluongSinhVien() > 0):
             for sv in self.listSinhVien:
                 if(keyword.upper() in sv._name.upper()):
                     listSV.append(sv)
